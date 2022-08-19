@@ -1,21 +1,60 @@
-header{
-    min-height:10vh;
-    padding: 2em;
-}
+.header{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    height:50vw;
+    min-height:400px;
+    max-height:550px;
+    min-width:300px;
+  }
 
-header div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  .header:before{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0); backface-visibility: hidden; 
+    transform: translateZ(0);
+    background:white url('../images/brain_header.png') 50% 0 no-repeat;
+    background-size:40%;
+    background-attachment:fixed;
+    animation: grow 360s  linear 20ms infinite;
+    transition:all 0.4s ease-in-out;
+    z-index:-2
+  }
 
-header input{
-    width: 250px;
-    height: 50px;
-}
+  .slogan{
+    width:100%;
+    padding:15% 10% 0 10%;
+    text-align:center;
+    color: dodgerblue;
+    text-shadow:0 2px 3px rgba(0,0,0,0.2)
+  }
 
-header img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
+  .slogan span{
+    color: dodgerblue;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  .top-slogan{
+    color: #f72e96;
+  }
+
+  .bottom-slogan{
+    /*color: #ea7323;*/
+    color: #9cd900;
+  }
+  
+  @keyframes grow{
+    0% { transform: scale(1) translateY(0px)}
+    50% { transform: scale(1.2) translateY(-400px)}
+  }
+ 
