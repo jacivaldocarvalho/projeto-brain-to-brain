@@ -1,60 +1,93 @@
-.header{
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-    align-content: flex-end;
-    height:50vw;
-    min-height:400px;
-    max-height:550px;
-    min-width:300px;
-  }
+.header-main{
+  display: flex;
+  flex-direction: column;
+}
 
-  .header:before{
-    content:"";
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0); backface-visibility: hidden; 
-    transform: translateZ(0);
-    background:white url('../images/brain_header.png') 50% 0 no-repeat;
-    background-size:40%;
-    background-attachment:fixed;
-    animation: grow 360s  linear 20ms infinite;
-    transition:all 0.4s ease-in-out;
-    z-index:-2
-  }
+.header-side-show{
+  display: none;
+}
 
-  .slogan{
-    width:100%;
-    padding:15% 10% 0 10%;
-    text-align:center;
-    color: dodgerblue;
-    text-shadow:0 2px 3px rgba(0,0,0,0.2)
-  }
+/* Adicionar Hero em SideShow*/
 
-  .slogan span{
-    color: dodgerblue;
-    font-style: italic;
-    font-weight: bold;
-  }
+/* Slideshow container */
+.header-slideshow-container {
+  width: 100%;
+  position: relative;
+}
 
-  .top-slogan{
-    color: #f72e96;
-  }
 
-  .bottom-slogan{
-    /*color: #ea7323;*/
-    color: #9cd900;
-  }
-  
-  @keyframes grow{
-    0% { transform: scale(1) translateY(0px)}
-    50% { transform: scale(1.2) translateY(-400px)}
-  }
- 
+.header-slideshow-container img{
+  /*opacity: 0.6;*/
+  height: 70vh;
+} 
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Caption text */
+.text {
+  color: #0854c1;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #1fb5cf;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

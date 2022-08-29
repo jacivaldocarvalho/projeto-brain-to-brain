@@ -4,41 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/main-master.css">
+
+    <link type="image/png" sizes="150x150" rel="icon" href="./src/images/logo-brain-to-brain.png">
     <title>Brain-to-Brain - Centro de Estudos</title>
+
+    <link rel="stylesheet" href="./src/css/main-master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
-
     <!-- Fixed Navbar -->
-    <nav>
-        <div class="topnav">
-
-            <div class="nav-left-logo">
-                <a class="logo" href="#brain-to-brain">Brain-to-Brain </a>
-                <span>Plataforma de estudos online</span>
-            </div>
+    <nav class="nav-top" id="topMenuBar">
+            
+        <div class="nav-left-logo">
+            <img src="./src/images/logo-brain-to-brain.png" alt="Logo Brain-to-Brain">
+            <h1>Brain-to-Brain</h1>
+        </div>
     
-            <div class="nav-right">
-                <a href="#home">Home</a>
-                <a href="#news">Conteúdo</a>
-                <a href="#about">Quem Somos</a>
-                <a href="#about">Entrar</a>
-                <a class="active" href="#home">Cadastra-se</a>
-            </div>
+        <div class="nav-right">
+            <a href="#home">Home</a>
+            <a href="#discipline">Disciplinas</a>
+            <a href="#about">Quem Somos</a>
+            <a href="javascript:void(0);" class="icon-bar" onclick="topMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
 
         </div>
 
     </nav>
 
     <!-- Header -->
-    <header>
-        <div class="header">
-            <div class="slogan">
-            <h1 class="top-slogan">Aprenda mais com o <span> Brain-to-Brain</span></h1>
-              <h2 class="bottom-slogan">Plataforma educacional grátis com matérias do ensino fundamental ao médio.</h2>
-            </div>
+    <header class="header-main">
+     
+    <div class="header-slideshow-container">
+
+        <div class="header-side-show fade">
+            <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" style="width:100%">
+            <!--  
+            <div class="hero-text">
+                <h1 style="font-size:50px">I am John Doe</h1>
+                <p>And I'm a Photographer</p>
+                <button>Hire me</button>
+              </div> -->
+        </div>
+        
+        <div class="header-side-show fade">
+            <img src="https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" style="width:100%">
+            <!-- <div class="text">As principais Disciplinas do ensino fundamental e médio.</div> -->
         </div>
 
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+        
     </header>
 
     <!-- Main -->
@@ -47,14 +73,31 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-main">
+    <footer class="footer-main">
+       
+        <div class="corporate">
+            <span>© 2022 Brain-to-Brain Todos os direitos reservados.</span>
+        </div>
 
-            <p>Author: Jacivaldo Carvalho</p>
-            <p><a href="mailto:jacivaldocarvalho@gmail.com">jacivaldocarvalho@gmail.com</a></p>
+        <div class="social-media">
+            <a href="##" target="_blank">
+                <img src="https://img.icons8.com/color/344/facebook-new.png" alt="Facebook"></a>
 
+            <a href="##" target="_blank">
+                <img src="https://img.icons8.com/color/344/twitter--v1.png" alt="Twitter"></a>
+            
+            <a href="##" target="_blank">
+                <img src="https://img.icons8.com/fluency/344/youtube-play.png" alt="Youtube"></a>
+
+            <a href="##" target="_blank">
+                <img src="https://img.icons8.com/fluency/344/instagram-new.png" alt="Instagran"></a>
         </div>
  
     </footer>
+
+    <!-- Scripts -->
+    <script src="./src/js/topMenu.js"></script>
+    <script src="./src/js/sideShow.js"></script>
+
 </body>
 </html>
